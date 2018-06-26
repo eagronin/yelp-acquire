@@ -22,7 +22,7 @@ The association and structure of the tables is shown below:
 
 We first change the directory to `/usr/local/mysql`, log in to mysql from the command line and create a database `yelp_db`: 
 
-```mysql
+```sql
 cd /usr/local/mysql
 bin/mysql -u root -p
 mysql> create database yelp_db
@@ -30,7 +30,7 @@ mysql> create database yelp_db
 
 Let's now exit from mysql, change the directory in the command line to the location of the dataset `yelp_db.sql` that we want to load, and then load the data:
 
-```mysql
+```sql
 mysql> exit
 cd /Users/eagronin/Documents/"Data Science"/"SQL for Data Science"
 /usr/local/mysql/bin/mysql -u root -p yelp_db < yelp_db.sql
@@ -52,7 +52,7 @@ The analysis for this project was performed in MySQL.
 
 Data exploration was performed by running a SQL script file `yelp_sql_code.sql` in which we included the code discussed in detail below.  In order to run the script, we execute the following lines of code:
 
-```mysql
+```sql
 mysql> use yelp_db
 mysql> source /Users/eagronin/Documents/Data Science/Portfolio/Project Code/yelp_sql_code.sql
 ```
@@ -69,7 +69,7 @@ in the beginning and `notee` in the end of `yelp_sql_code.sql`.
 
 The following code profiles the data by finding the total number of records for each of the tables in the database:
 
-```mysql
+```sql
 select count(*) from Attribute;
 select count(*) from Business;
 select count(*) from Category;
