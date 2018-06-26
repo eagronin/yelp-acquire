@@ -90,7 +90,6 @@ select count(*) from user;
 
 The number of records for each of the tables is summarized below:
 
-```
 | Table Name | No. Records |
 | --- | --- |
 | Attribute table | 1310575 | 
@@ -104,7 +103,6 @@ The number of records for each of the tables is summarized below:
 | review table | 5261669 | 
 | tip table | 1098325 | 
 | user table | 1326101 | 
-```
 
 
 3. Are there any columns with null values in the Users table?
