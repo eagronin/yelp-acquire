@@ -84,7 +84,7 @@ select count(*) from user;
 The number of records for each of the tables is summarized below:
 
 | Table Name | No. Records |
-| --- | ---:|
+|:--- | ---:|
 | Attribute table | 1,310,575 | 
 | Business table | 174,567 | 
 | Category table | 667,527 | 
@@ -127,7 +127,7 @@ The output below shows that there are no NULL values in the user table:
 
 
 | Feature Name | No. NULL Values |
-| --- |:---:|
+|:--- |:---:|
 | id | - |
 | name | - |
 | review_count | - |
@@ -163,7 +163,7 @@ select min(review_count), max(review_count), avg(review_count) from user;
 The output is summarized in the table below:
 
 | Table | Column | Min | Max | Average |
-| --- | --- |:---:| ---:| ---:|
+|:--- |:--- |:---:| ---:| ---:|
 | Review | Stars | 1 | 5 | 3.7277 |
 | Business | Stars | 1 | 5 | 3.6322 |
 | Tip | Likes | 0 | 15 | 0.0166 |
