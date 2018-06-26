@@ -163,7 +163,7 @@ select min(review_count), max(review_count), avg(review_count) from user;
 This generated the following output:
 
 | Table | Column | Min | Max | Average |
-| --- | --- |:---:|:---:| ---:|
+| --- | --- |:---:| ---:| ---:|
 | Review | Stars | 1 | 5 | 3.7277 |
 | Business | Stars | 1 | 5 | 3.6322 |
 | Tip | Likes | 0 | 15 | 0.0166 |
@@ -171,7 +171,8 @@ This generated the following output:
 | User | Review_count | 0 | 11,954 | 23.1172 |
 
 
-5. List the cities with the most reviews in descending order (limit the list to top 25 cities):
+Identifying the cities with the most reviews, we list top 25 cities in terms of the number of reviews in descending order:
+
 ```mysql
 select city, sum(review_count) as all_review_count
 from business
@@ -183,7 +184,36 @@ limit 25;
 This generated the following output:
 
 ```
-
++-----------------+------------------+
+| city            | all_review_count |
++-----------------+------------------+
+| Las Vegas       |          1605343 |
+| Phoenix         |           576709 |
+| Toronto         |           430985 |
+| Scottsdale      |           308529 |
+| Charlotte       |           237118 |
+| Pittsburgh      |           179471 |
+| Henderson       |           166884 |
+| Tempe           |           162772 |
+| Mesa            |           134156 |
+| Montréal        |           128285 |
+| Chandler        |           122343 |
+| Gilbert         |            97204 |
+| Cleveland       |            92280 |
+| Madison         |            86614 |
+| Glendale        |            76293 |
+| Edinburgh       |            48838 |
+| Mississauga     |            43147 |
+| Peoria          |            42584 |
+| Markham         |            38840 |
+| North Las Vegas |            37928 |
+| Champaign       |            26260 |
+| Surprise        |            25740 |
+| Stuttgart       |            25537 |
+| Goodyear        |            21508 |
+| Richmond Hill   |            18329 |
++-----------------+------------------+
+25 rows in set (0.12 sec)
 ```
 
 
