@@ -91,8 +91,8 @@ select count(*) from user;
 The number of records for each of the tables is summarized below:
 
 ```
-| --- | --- | --- |
 | Table Name | No. Records | No. Distinct Records |
+| --- | --- | --- |
 | Attribute table | 1310575 | 
 | Business table | 174567 | 174567
 | Category table | 667527 | 
