@@ -171,7 +171,7 @@ The output is summarized in the table below:
 | User | Review_count | 0 | 11,954 | 23.1172 |
 
 
-Identifying the cities with the most reviews, we list top 25 cities in terms of the number of reviews in descending order:
+In order to identify the cities with the most reviews, we list top 25 cities in terms of the number of reviews in descending order:
 
 ```mysql
 select city, sum(review_count) as all_review_count
