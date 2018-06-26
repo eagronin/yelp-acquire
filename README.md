@@ -21,20 +21,21 @@ tee /Users/eagronin/Documents/Data Science/Portfolio/Project Code/yelp_output.tx
 
 Part 1: Yelp Dataset Profiling and Understanding
 
-1. Profile the data by finding the total number of records for each of the tables below:
+1. Profile the data by finding the total number of records for each of the tables, as well as the number of distinct records for each of the keys listed below:
 
-	i. 	Attribute table
-	ii. 	Business table
-	iii. 	Category table
-	iv. 	Checkin table
-	v. 	elite_years table
-	vi. 	friend table
-	vii. 	hours table
-	viii. 	photo table
-	ix. 	review table
-	x. 	tip table
-	xi. 	user table
+i. 	Attribute table
+ii. 	Business table
+iii. 	Category table
+iv. 	Checkin table
+v. 	elite_years table
+vi. 	friend table
+vii. 	hours table
+viii. 	photo table
+ix. 	review table
+x. 	tip table
+xi. 	user table
 
+Number of records:
 
 ```mysql
 select count(*) from Attribute;
@@ -50,26 +51,20 @@ select count(*) from tip;
 select count(*) from user;
 ```
 
-This generated the following output:
 
-```
+Number of distinct records (remove rows below after accounting for the difference in order):
 
-```
-
-
-2. Find the total number of distinct records for each of the keys listed below:
-
-	i. 	Business 
-	ii. 	Hours  
-	iii. 	Category  
-	iv. 	Attribute 
-	v. 	Review  
-	vi. 	Checkin  
-	vii. 	Photo 
-	viii. 	Tip 
-	ix. 	User 
-	x. 	Friend 
-	xi. 	Elite_years
+i. 	Business 
+ii. 	Hours  
+iii. 	Category  
+iv. 	Attribute 
+v. 	Review  
+vi. 	Checkin  
+vii. 	Photo 
+viii. 	Tip 
+ix. 	User 
+x. 	Friend 
+xi. 	Elite_years
 
 
 
@@ -99,7 +94,7 @@ select count(distinct user_id) from Elite_years;
 This generated the following output:
 
 ```
-
+create a table with 3 columns
 ```
 
 
