@@ -36,13 +36,6 @@ cd /Users/eagronin/Documents/"Data Science"/"SQL for Data Science"
 /usr/local/mysql/bin/mysql -u root -p yelp_db < yelp_db.sql
 ```
 
-- run batch code: 
-
-
-```mysql
-tee /Users/eagronin/Documents/Data Science/Portfolio/Project Code/yelp_output.txt
-```
-
 # Data Preparation
 
 ## Overview
@@ -134,7 +127,7 @@ The output below shows that there are no NULL values in the user table:
 
 
 | Feature Name | No. NULL Values |
-| --- | --- |
+| --- | --- ||
 | id | - |
 | name | - |
 | review_count | - |
