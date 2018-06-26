@@ -160,7 +160,7 @@ select min(count), max(count), avg(count) from checkin;
 select min(review_count), max(review_count), avg(review_count) from user;
 ```
 
-This generated the following output:
+The output is summarized in the table below:
 
 | Table | Column | Min | Max | Average |
 | --- | --- |:---:| ---:| ---:|
