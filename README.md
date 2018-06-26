@@ -10,7 +10,7 @@ This project is based on assignments from SQL for Data Science by University of 
 
 The analysis for this project was performed in MySQL.
 
-## Description of the Yelp dataset
+## Description of the Yelp Dataset
 
 The Yelp dataset `yelp_db.sql` has been downloaded from the [Yelp Open Dataset](https://www.yelp.com/dataset) website.
 
@@ -18,7 +18,7 @@ The association and structure of the tables is shown below:
 
 ![](https://github.com/eagronin/yelp-acquire/blob/master/yelp_dataset_schema.png?raw=true)
 
-## Loading Yelp dataset into SQL
+## Loading Yelp Dataset into SQL
 
 We first change the directory to `/usr/local/mysql`, log in to mysql from the command line and create a database `yelp_db`: 
 
