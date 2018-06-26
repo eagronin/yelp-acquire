@@ -127,7 +127,7 @@ The output below shows that there are no NULL values in the user table:
 
 
 | Feature Name | No. NULL Values |
-| --- | --- ||
+| --- |:---:|
 | id | - |
 | name | - |
 | review_count | - |
