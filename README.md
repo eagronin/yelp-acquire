@@ -150,14 +150,7 @@ The output below shows that there are no NULL values in the user table:
 | compliment_photos | - |
 
 
-4. Find the minimum, maximum, and average value for the following fields:
-
-	i. Table: Review, Column: Stars
-	ii. Table: Business, Column: Stars
-	iii. Table: Tip, Column: Likes
-	iv. Table: Checkin, Column: Count
-	v. Table: User, Column: Review_count
-
+To find the minimum, maximum, and average value for selected features listed in the output table below, we run the following code: 
 
 ```mysql
 select min(stars), max(stars), avg(stars) from review;
@@ -169,9 +162,13 @@ select min(review_count), max(review_count), avg(review_count) from user;
 
 This generated the following output:
 
-```
-
-```
+| Table | Column | Min | Max | Average |
+| --- | --- |:---:|:---:| ---:|
+| Review | Stars | 1 | 5 | 3.7277 |
+| Business | Stars | 1 | 5 | 3.6322 |
+| Tip | Likes | 0 | 15 | 0.0166 |
+| Checkin | Count | 1 | 1,478 | 4.2566 |
+| User | Review_count | 0 | 11,954 | 23.1172 |
 
 
 5. List the cities with the most reviews in descending order (limit the list to top 25 cities):
