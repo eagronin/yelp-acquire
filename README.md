@@ -92,20 +92,20 @@ The number of records for each of the tables is summarized below:
 
 | Table Name | No. Records |
 | --- | --- |
-| Attribute table | 1310575 | 
-| Business table | 174567 | 174567
-| Category table | 667527 | 
-| Checkin table | 3911218 | 
-| elite_years table | 187125 | 
-| friend table | 49626957 | 
-| hours table | 824595 | 
-| photo table | 206949 | 
-| review table | 5261669 | 
-| tip table | 1098325 | 
-| user table | 1326101 | 
+| Attribute table | 1,310,575 | 
+| Business table | 174,567 | 
+| Category table | 667,527 | 
+| Checkin table | 3,911,218 | 
+| elite_years table | 187,125 | 
+| friend table | 49,626,957 | 
+| hours table | 824,595 | 
+| photo table | 206,949 | 
+| review table | 5,261,669 | 
+| tip table | 1,098,325 | 
+| user table | 1,326,101 | 
 
 
-3. Are there any columns with null values in the Users table?
+Next we check if there are any NULL values in the Users table:
 
 ```mysql
 select id from user where id is NULL;
@@ -130,11 +130,31 @@ select id from user where compliment_writer is NULL;
 select id from user where compliment_photos is NULL;
 ```
 
-This generated the following output:
+The output below shows that there are no NULL values in the user table:
 
-```
 
-```
+| Feature Name | No. NULL Values |
+| --- | --- |
+| id | - |
+| name | - |
+| review_count | - |
+| yelping_since | - |
+| useful | - |
+| funny | - |
+| cool | - |
+| fans | - |
+| average_stars | - |
+| compliment_hot | - |
+| compliment_more | - |
+| compliment_profile | - |
+| compliment_cute | - |
+| compliment_list | - |
+| compliment_note | - |
+| compliment_plain | - |
+| compliment_cool | - |
+| compliment_funny | - |
+| compliment_writer | - |
+| compliment_photos | - |
 
 
 4. Find the minimum, maximum, and average value for the following fields:
