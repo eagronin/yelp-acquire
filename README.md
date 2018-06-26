@@ -93,17 +93,17 @@ The number of records for each of the tables is summarized below:
 ```
 | --- | --- | --- |
 | Table Name | No. Records | No. Distinct Records |
-Attribute table | 1310575 | 
-Business table | 174567 | 174567
-Category table | 667527 | 
-Checkin table | 3911218 | 
-elite_years table | 187125 | 
-friend table | 49626957 | 
-hours table | 824595 | 
-photo table | 206949 | 
-review table | 5261669 | 
-tip table | 1098325 | 
-user table | 1326101 | 
+| Attribute table | 1310575 | 
+| Business table | 174567 | 174567
+| Category table | 667527 | 
+| Checkin table | 3911218 | 
+| elite_years table | 187125 | 
+| friend table | 49626957 | 
+| hours table | 824595 | 
+| photo table | 206949 | 
+| review table | 5261669 | 
+| tip table | 1098325 | 
+| user table | 1326101 | 
 ```
 
 
