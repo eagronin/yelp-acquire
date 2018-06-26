@@ -84,7 +84,7 @@ select count(*) from user;
 The number of records for each of the tables is summarized below:
 
 | Table Name | No. Records |
-| --- | --- |
+| --- | ---:|
 | Attribute table | 1,310,575 | 
 | Business table | 174,567 | 
 | Category table | 667,527 | 
