@@ -1,18 +1,42 @@
 # Data Acquisition
 
-This section describes the process of loading Yelp dataset into SQL in order to explore and prepare data for the analysis of factors that affect the number of stars that users assign in their reviews.
+## Overview
 
-Describe Yelp dataset and insert the ER diagram.
+This section describes the process of loading Yelp dataset into SQL in order to explore and prepare the data for predictive modeling of the number of stars that users assign in their reviews.
 
+Data exploration and preparation for predictive modeling are discussed in the [next section](https://eagronin.github.io/yelp-prepare/).
 
-loading yelp_db.sql - 
+This project is based on assignments from SQL for Data Science by University of California, Davis on Coursera.
 
-log into mysql from the prompt from /usr/local/mysql: bin/mysql -u root -p
-- create a new database: create database yelp_db
-- exit from mysql: exit
-- change directory to the location of yelp_db.sql: cd /Users/eagronin/Documents/"Data Science"/"SQL for Data Science"
-- load sql dump: /usr/local/mysql/bin/mysql -u root -p yelp_db < yelp_db.sql
-- run batch code: source /Users/eagronin/Documents/Data Science/Portfolio/Project Code/yelp_sql_code.sql
+The analysis for this project was performed in MySQL.
+
+## Description of the Yelp dataset
+
+The Yelp dataset `yelp_db.sql` has been downloaded from the [Yelp Open Dataset](https://www.yelp.com/dataset) website.
+
+The association and structure of the tables is shown below:
+
+![](https://github.com/eagronin/yelp-acquire/blob/master/yelp_dataset_schema.png?raw=true)
+
+## Loading Yelp dataset into SQL
+
+We first change the directory to `/usr/local/mysql`, log in to mysql from the command line and create a database `yelp_db`: 
+
+```mysql
+cd /usr/local/mysql
+bin/mysql -u root -p
+mysql> create database yelp_db
+```
+
+Let's now exit from mysql, change the directory in the command line to the location of the dataset `yelp_db.sql` that we want to load, and then load the data:
+
+```mysql
+mysql> exit
+cd /Users/eagronin/Documents/"Data Science"/"SQL for Data Science"
+/usr/local/mysql/bin/mysql -u root -p yelp_db < yelp_db.sql
+```
+
+- run batch code: 
 
 
 ```mysql
@@ -21,23 +45,34 @@ tee /Users/eagronin/Documents/Data Science/Portfolio/Project Code/yelp_output.tx
 
 # Data Preparation
 
-Part 1: Yelp Dataset Profiling and Understanding
+## Overview
 
-1. Profile the data by finding the total number of records for each of the tables, as well as the number of distinct records for each of the keys listed below:
+This section explores Yelp dataset and prepares the data for predictive modeling of the number of stars that users assign in their reviews.
 
-i. 	Attribute table
-ii. 	Business table
-iii. 	Category table
-iv. 	Checkin table
-v. 	elite_years table
-vi. 	friend table
-vii. 	hours table
-viii. 	photo table
-ix. 	review table
-x. 	tip table
-xi. 	user table
+The description and process of loading the Yelp dataset into MySQL are discussed in the [previous section](https://eagronin.github.io/yelp-acquire/).
 
-Number of records:
+This project is based on assignments from SQL for Data Science by University of California, Davis on Coursera.
+
+The analysis for this project was performed in MySQL.
+
+Data exploration was performed by running a SQL script file `yelp_sql_code.sql` in which we included the code discussed in detail below.  In order to run the script, we execute the following lines of code:
+
+```mysql
+mysql> use yelp_db
+mysql> source /Users/eagronin/Documents/Data Science/Portfolio/Project Code/yelp_sql_code.sql
+```
+
+The output was automatically recorded into an output file `yelp_output.txt`.  This was accomplished by adding 
+
+```mysql
+tee /Users/eagronin/Documents/Data Science/Portfolio/Project Code/yelp_output.txt
+```
+
+in the beginning and `notee` in the end of `yelp_sql_code.sql`.
+
+# Yelp Dataset Profiling and Understanding
+
+The following code profiles the data by finding the total number of records for each of the tables in the database:
 
 ```mysql
 select count(*) from Attribute;
@@ -53,50 +88,22 @@ select count(*) from tip;
 select count(*) from user;
 ```
 
-
-Number of distinct records (remove rows below after accounting for the difference in order):
-
-i. 	Business 
-ii. 	Hours  
-iii. 	Category  
-iv. 	Attribute 
-v. 	Review  
-vi. 	Checkin  
-vii. 	Photo 
-viii. 	Tip 
-ix. 	User 
-x. 	Friend 
-xi. 	Elite_years
-
-
-
-```mysql
-select count(distinct id) from Business;
-select count(distinct business_id) from Hours;
-select count(distinct business_id) from Category;
-select count(distinct business_id) from Attribute;
-
-select count(distinct id) from Review;
-select count(distinct business_id) from Review;
-select count(distinct user_id) from Review;
-
-select count(distinct business_id) from Checkin;
-
-select count(distinct id) from Photo;
-select count(distinct business_id) from Photo;
-
-select count(distinct business_id) from Tip;
-select count(distinct user_id) from Tip;
-
-select count(distinct id) from User;
-select count(distinct user_id) from Friend;
-select count(distinct user_id) from Elite_years;
-```
-
-This generated the following output:
+The number of records for each of the tables is summarized below:
 
 ```
-create a table with 3 columns
+| --- | --- | --- |
+| Table Name | No. Records | No. Distinct Records |
+Attribute table | 1310575 | 
+Business table | 174567 | 174567
+Category table | 667527 | 
+Checkin table | 3911218 | 
+elite_years table | 187125 | 
+friend table | 49626957 | 
+hours table | 824595 | 
+photo table | 206949 | 
+review table | 5261669 | 
+tip table | 1098325 | 
+user table | 1326101 | 
 ```
 
 
