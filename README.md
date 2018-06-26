@@ -19,6 +19,8 @@ log into mysql from the prompt from /usr/local/mysql: bin/mysql -u root -p
 tee /Users/eagronin/Documents/Data Science/Portfolio/Project Code/yelp_output.txt
 ```
 
+# Data Preparation
+
 Part 1: Yelp Dataset Profiling and Understanding
 
 1. Profile the data by finding the total number of records for each of the tables, as well as the number of distinct records for each of the keys listed below:
