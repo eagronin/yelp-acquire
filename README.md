@@ -30,7 +30,7 @@ bin/mysql -u root -p
 Then we create a database `yelp_db`:
 
 ```sql
-create database yelp_db
+mysql> create database yelp_db
 ```
 
 Let's now exit from mysql by typing `exit`, then change the directory in the command line to the location of the dataset `yelp_db.sql` that we want to load, and load the data:
