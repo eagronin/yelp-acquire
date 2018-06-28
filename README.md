@@ -20,18 +20,22 @@ The association and structure of the tables is shown below:
 
 ## Loading Yelp Dataset into SQL
 
-We first change the directory to `/usr/local/mysql`, log in to mysql from the command line and create a database `yelp_db`: 
+We first change the directory to `/usr/local/mysql`, log in to mysql from the command line: 
 
-```sql
+```ShellSession
 cd /usr/local/mysql
 bin/mysql -u root -p
-mysql> create database yelp_db
 ```
 
-Let's now exit from mysql, change the directory in the command line to the location of the dataset `yelp_db.sql` that we want to load, and then load the data:
+Then we create a database `yelp_db`:
 
 ```sql
-mysql> exit
+create database yelp_db
+```
+
+Let's now exit from mysql by typing `exit`, then change the directory in the command line to the location of the dataset `yelp_db.sql` that we want to load, and load the data:
+
+```ShellSession
 cd /Users/eagronin/Documents/"Data Science"/"SQL for Data Science"
 /usr/local/mysql/bin/mysql -u root -p yelp_db < yelp_db.sql
 ```
